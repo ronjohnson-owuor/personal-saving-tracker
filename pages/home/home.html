@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>savings home</title>
+    <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 w-full min-h-screen">
+
+    <!-- dashboard and overview -->
+    <div class="w-[95%] p-2 min-h-[200px] grid grid-cols-3 gap-4  my-4 mx-[2%] rounded-md">
+        <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-green-500 font-bold text-[60px]">🎯  80K</h1>
+            <h1 class="text-white text-xl">Target(ksh.)</h1>
+            <span class="text-green-300 text-[10px]">this month</span>
+        </div>
+        <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-red-500 font-bold text-[60px]">⌛ 500</h1>
+            <div class=" w-[60%] bg-gray-600 h-[4px] rounded-[20px] mb-4">
+                <!-- progress bar -->
+                 <div id="low" class="w-[10%] bg-red-500 h-[4px] rounded-[20px] shadow-[10_10_50px_crimson] "></div>
+            </div>
+            <h1 class="text-red-500 text-xl ">saved so far</h1>
+            <span class="text-green-300 text-[10px]">ksh.500 remaining</span>
+        </div>
+        <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-green-500 font-bold text-[60px]">💰 10M</h1>
+            <h1 class="text-white text-xl">Total saved(ksh.)</h1>         
+        </div>
+    </div>
+    <div class="my-10 w-[90%] mx-[2%]">
+        <h1 class=" text-[18px] text-gray-600 px-4">My Loan (maximum 1)</h1>
+    </div>
+    <!-- loans => borrowing from your savings -->
+    <div class=" relative w-[95%] bg-gradient-to-br from-red-600 via-red-700 to-red-900 p-2 min-h-[300px] grid grid-cols-3 gap-4  my-4 mx-[2%] rounded-md " >
+        <div class="bg-gradient-to-b shadow-md rounded-md from-red-400 via-red-500 to-red-700 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-white font-bold text-[60px]">⏳ Ksh.500</h1>
+            <h1 class="text-white text-xl">pending loan</h1> 
+            
+            <span></span>        
+        </div>
+        <!-- total borrowed -->
+        <div class="bg-gradient-to-b shadow-md rounded-md from-red-400 via-red-500 to-red-700 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-white font-bold text-[60px]">🏛️ 10M</h1>
+            <h1 class="text-white text-xl">Total borrowed(ksh.)</h1>         
+        </div>
+        <div class="bg-gradient-to-b shadow-md rounded-md from-red-400 via-red-500 to-red-700 rounded-md flex items-center justify-center flex-col">
+            <h1 class="text-white font-bold text-[60px]">20% </h1>
+            <h1 class="text-white text-xl">interest per day</h1> 
+            <span class="text-green-300 text-[10px]">deadline 10/12/2024</span>     
+        </div>
+        <div class="bottom-4 w-[100%] my-4 shadow-md rounded-md min-h-[20px] p-2">
+            <button class="bg-red-400 w-[150px] mx-4 p-2 rounded-md">pay loan</button><button class="bg-red-400 w-[150px] mx-4 p-2 rounded-md"> borrow</button>
+        </div>
+    </div>
+    <div class="my-10 w-[90%] mx-[2%]">
+        <h1 class=" text-[18px] text-gray-600 px-4">Quick actions</h1>
+    </div>
+    <div class="w-[95%] p-2 min-h-[200px] grid grid-cols-2 gap-4  my-4 mx-[2%] rounded-md bg-slate-800">
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="font-bold text-white">deposit money/pay Loan</h1>
+            <span class="w-[60%] my-2 text-[10px] text-center">if you have a pending loan the money will be automatically used to pay the loan</span>
+            <form >
+                <input class="h-[40px] w-[60%] p-2 rounded-md" type="text" placeholder="amount in ksh">
+                <input class="h-[40px] w-[80px] text-white p-2 rounded-md bg-green-600" type="submit" value="deposit">
+            </form>
+            <a href="#" class="w-[60%] my-2 text-green-400 text-[10px] underline text-center">deposit history</a>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="font-bold text-white">Borrow money</h1>
+            <span class="w-[60%] my-2 text-[10px] text-center">maximmum loans you can have is 1</span>
+            <form >
+                <input class="h-[40px] w-[60%] p-2 rounded-md" type="text" placeholder="amount in ksh">
+                <input class="h-[40px] w-[80px] text-white p-2 rounded-md bg-red-600" type="submit" value="borrow">
+            </form>
+            <a class="w-[60%] my-2 text-red-400 text-[10px] underline text-center" href="#">borrowing history</a>
+        </div>
+
+    </div>
+</body>
+</html>
