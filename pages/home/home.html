@@ -23,7 +23,7 @@
                  <div id="progress_bar" class="h-[4px] rounded-[20px] shadow-[10_10_50px_crimson] "></div>
             </div>
             <h1 class="text-red-500 text-xl ">saved so far</h1>
-            <span class="text-green-300 text-[10px]">ksh.500 remaining</span>
+            <span id="remaining"  class="text-green-300 text-[10px]"></span>
         </div>
         <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
             <h1 id="total_saved" class="text-green-500 font-bold text-[60px]"></h1>
@@ -62,8 +62,8 @@
         <div class="flex flex-col items-center justify-center">
             <h1 class="font-bold text-white">deposit money/pay Loan</h1>
             <span class="w-[60%] my-2 text-[10px] text-center">if you have a pending loan the money will be automatically used to pay the loan</span>
-            <form >
-                <input class="h-[40px] w-[60%] p-2 rounded-md" type="text" placeholder="amount in ksh">
+            <form id="deposit_form" >
+                <input class="h-[40px] w-[60%] p-2 rounded-md"  type="number" id="deposit" placeholder="amount in ksh">
                 <input class="h-[40px] w-[80px] text-white p-2 rounded-md bg-green-600" type="submit" value="deposit">
             </form>
             <a href="#" class="w-[60%] my-2 text-green-400 text-[10px] underline text-center">deposit history</a>
@@ -72,8 +72,8 @@
         <div class="flex flex-col items-center justify-center">
             <h1 class="font-bold text-white">Borrow money</h1>
             <span class="w-[60%] my-2 text-[10px] text-center">maximmum loans you can have is 1</span>
-            <form >
-                <input class="h-[40px] w-[60%] p-2 rounded-md" type="text" placeholder="amount in ksh">
+            <form id="loan_form">
+                <input id="loan_input" class="h-[40px] w-[60%] p-2 rounded-md" type="text" placeholder="amount in ksh">
                 <input class="h-[40px] w-[80px] text-white p-2 rounded-md bg-red-600" type="submit" value="borrow">
             </form>
             <a class="w-[60%] my-2 text-red-400 text-[10px] underline text-center" href="#">borrowing history</a>
