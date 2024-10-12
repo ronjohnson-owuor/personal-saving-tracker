@@ -2,7 +2,7 @@
   "name": "saving-app",
   "version": "0.0.0",
   "private": true,
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "nodemon ./bin/www",
     "styles": "npx tailwindcss -i ./pages/input.css -o ./pages/output.css --watch"
@@ -13,7 +13,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"

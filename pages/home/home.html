@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>savings home</title>
     <link href="../output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="bg-gray-900 w-full min-h-screen">
 
     <!-- dashboard and overview -->
     <div class="w-[95%] p-2 min-h-[200px] grid grid-cols-3 gap-4  my-4 mx-[2%] rounded-md">
         <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
-            <h1 class="text-green-500 font-bold text-[60px]">🎯  80K</h1>
+            <h1 id="target" class="text-green-500 font-bold text-[60px]"></h1>
             <h1 class="text-white text-xl">Target(ksh.)</h1>
             <span class="text-green-300 text-[10px]">this month</span>
         </div>
         <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
-            <h1 class="text-red-500 font-bold text-[60px]">⌛ 500</h1>
+            <h1 id="progress" class="text-red-500 font-bold text-[60px]"></h1>
             <div class=" w-[60%] bg-gray-600 h-[4px] rounded-[20px] mb-4">
                 <!-- progress bar -->
-                 <div id="low" class="w-[10%] bg-red-500 h-[4px] rounded-[20px] shadow-[10_10_50px_crimson] "></div>
+                 <div id="progress_bar" class="h-[4px] rounded-[20px] shadow-[10_10_50px_crimson] "></div>
             </div>
             <h1 class="text-red-500 text-xl ">saved so far</h1>
             <span class="text-green-300 text-[10px]">ksh.500 remaining</span>
         </div>
         <div class="bg-gray-800 rounded-md flex items-center justify-center flex-col">
-            <h1 class="text-green-500 font-bold text-[60px]">💰 10M</h1>
+            <h1 id="total_saved" class="text-green-500 font-bold text-[60px]"></h1>
             <h1 class="text-white text-xl">Total saved(ksh.)</h1>         
         </div>
     </div>
@@ -79,5 +80,6 @@
         </div>
 
     </div>
+    <script type="module" src="../public/javascript/home.js"></script>
 </body>
 </html>
