@@ -63,7 +63,10 @@ const depositMoney = async (e) =>{
     // if there is loan
 
     //  if there is no loan
-    const {message} = await axios.post("/api/deposit",{amount: amount.value});
+    const message = await axios.post("/api/deposit",{amount: amount.value});
+    if(await message){
+        alert(await message.data.message);
+    };
     console.log(await message);
     var confirm_reload = confirm("reload  with new current financial data");
     if(confirm_reload){
@@ -76,13 +79,17 @@ const depositMoney = async (e) =>{
 // borrow loans
 const loanInput = document.getElementById('loan_input');
 const loanForm = document.getElementById('loan_form');
-const borrowLoan = (e) => {
+const borrowLoan = async (e) => {
     e.preventDefault();
     var consent = confirm('you are about to borrow a Loan');
     if(!consent){
         return;
     }
+    // user agree to take loan
     var loan_amount = loanInput.value;
-    alert(`you borrowed: ${loan_amount}`);
+    const res =  await axios.post('/api/borrow-loan',{amount:loan_amount});
+    if(await res.data.message){
+        alert(await res.data.message);
+    }
 }
 loanForm.addEventListener('submit',(e)=>borrowLoan(e));
